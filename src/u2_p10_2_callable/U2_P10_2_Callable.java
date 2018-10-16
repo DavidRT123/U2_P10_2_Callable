@@ -63,19 +63,14 @@ public class U2_P10_2_Callable {
             cS.setInt(1, resp);
             
             //Ejecutar función
-            ResultSet r = cS.executeQuery();
+           cS.executeQuery();
             
             //Situamos el resultado sobre la primera fila
-            r.next();
+           
             
-            System.out.print("El departamento nº: " + resp);
+            System.out.print("El departamento nº: " + cS.getString(1));
             
-            if(r.getString(1) == null){
-                System.out.println(" NO EXISTE");
-            }else{
-                System.out.println(" se llama: " + r.getString(1));
-            }
-            System.out.println("");
+            
                     
             cS.close();
             con.close();
